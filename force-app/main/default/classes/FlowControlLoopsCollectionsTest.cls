@@ -20,7 +20,7 @@ public with sharing class FlowControlLoopsCollectionsTest {
     }
 
     @IsTest
-    static void testVotingEligibility() {
+    static void testVotingEligibility(20) {
         Boolean result = FlowControlLoopsCollections.votingEligibility(18);
         Assert.isTrue(result, 'Incorrect result for age >= 18');
 

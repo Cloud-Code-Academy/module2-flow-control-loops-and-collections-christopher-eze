@@ -14,7 +14,7 @@
 * in flow control, loops, and collections. By mastering these concepts, developers will be able to write more
 * efficient and effective code in their Salesforce projects.
 *
-* @author Your Name
+* @author Christopher Ezenwenyi
 */
 
 public with sharing class FlowControlLoopsCollections {
@@ -28,9 +28,15 @@ public with sharing class FlowControlLoopsCollections {
      * @param y The second number.
      * @return "Hello World!" if x greater than y, otherwise return null.
      */
-    public static String helloWorld(Integer x, Integer y) {
-        return null; // Replace null with the variable you used to store the result
-    }
+    public static String helloWorld(Integer x, Integer y) { 
+        if (x == null && y == null && x < y) {
+            return null;
+         } else {
+                return 'Hello World!';
+            }
+        }   
+        // return null; // Replace null with the variable you used to store the result
+    
 
     /**
      * Question 2
@@ -42,7 +48,12 @@ public with sharing class FlowControlLoopsCollections {
      * @return true if the person is eligible to vote, false otherwise.
      */
     public static Boolean votingEligibility(Integer age) {
-        return null; // Replace null with the variable you used to store the result
+        if (age >= 18) {
+            return true;
+        } else {
+            return false;
+        }
+        // return null; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -54,11 +65,18 @@ public with sharing class FlowControlLoopsCollections {
      * @param num2 The second number.
      * @return The maximum of the two numbers, or null if either number is null.
      */
-    public static Integer findMax(Integer num1, Integer num2) {
-        // Initialize largestNum as null
-        Integer largestNum = null;
 
-        return null; // Replace null with the variable you used to store the result
+    public static Integer findMax(Integer num1, Integer num2) {
+        if (num1 == num2) {
+            return num1; 
+        } else (num1 == null || num2 == null) { 
+            return null; 
+        } else {
+            return Math.max(num1, num2);
+        }
+        // Initialize largestNum as null
+        Integer largestNum = Math.max;
+        return largestNum; // Replace null with the variable you used to store the result
     }
 
 
@@ -71,8 +89,21 @@ public with sharing class FlowControlLoopsCollections {
      * @return A string indicating whether the number is "Positive", "Negative", or "Zero", or null if the number is null.
      */
     public static String checkNumber(Integer a) {
-        return null; // Replace null with the variable you used to store the result
-    }
+        when (a < 0) {
+            return 'Negative';
+        } 
+        when (a > 0) {
+            return 'Positive';
+        } 
+        when (a == 0) {
+            return 'Zero';
+        }
+        when else {
+            return null;
+            }
+        }
+        // return null; // Replace null with the variable you used to store the result
+    
 
     /**
      * Question 5
@@ -82,8 +113,17 @@ public with sharing class FlowControlLoopsCollections {
      * @param a The number to check.
      * @return A string indicating whether the number is "Even" or "Odd", or null if the number is null.
      */
-    public static String checkEvenOdd(Integer a) {
-        return null; // Replace null with the variable you used to store the result
+    public static String checkEvenOdd(Integer a) { 
+        if (a == null) {
+            return null;
+        } else {
+            (a % 2 == 0) 
+            return 'Even';
+        } else {
+            return 'odd';
+        }
+
+        // return null; // Replace null with the variable you used to store the result
     }
 
     /**
