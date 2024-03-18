@@ -29,7 +29,7 @@ public with sharing class FlowControlLoopsCollections {
      * @return "Hello World!" if x greater than y, otherwise return null.
      */
     public static String helloWorld(Integer x, Integer y) { 
-        if (x == null && y == null && x < y) {
+        if (x == null || y == null || x < y) {
             return null;
         } else {
                 return 'Hello World!';
@@ -99,7 +99,7 @@ public with sharing class FlowControlLoopsCollections {
             return null;
             }
         }
-        // return null; // Replace null with the variable you used to store the result
+         return checkNumber; // Replace null with the variable you used to store the result
     
 
     /**
@@ -112,15 +112,14 @@ public with sharing class FlowControlLoopsCollections {
      */
 
     public static String checkEvenOdd(Integer a) { 
-        if (Math.mod(a, 2) == 0) {
-            System.debug('Even');
+        if (a == null) {
+            System.debug('Null');
+        } else if (String.isEmpty(a)) {
+            System.debug('Empty');
         } else {
-            System.debug('Odd');
-        } else if (a == null) {
-            System.debug('null');
+            System.debug('Contains Text');
         }
-        }
-
+    }
 
     /**
      * Question 6
@@ -164,7 +163,7 @@ public with sharing class FlowControlLoopsCollections {
         } else {
             return 'F';
         }
-        // return null; // Replace null with the variable you used to store the result
+        return determineGrade; // Replace null with the variable you used to store the result
     }
 
 
@@ -176,10 +175,12 @@ public with sharing class FlowControlLoopsCollections {
      * @return The sum of all integers up to the limit.
      */
     public static Integer sumUpToLimit(Integer intLimit) {
-        for (integer i = 0; i < intLimit; i++){
-            sum += i;        
-        }
-
+        Integer intLimit = 5;
+        Integer sum = 0;
+        for (integer i = 1; i <= intLimit; i++){
+                    sum += i;  
+                    System.debug(sum);
+                }  
         return sumUpToLimit; // Replace null with the variable you used to store the result
     }
 
@@ -191,14 +192,13 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static String returnHelloWorld() {
         // Initialize the result String
-
+        String result = '';
         // Use a for loop to append 'Hello World!;' to the result string three times
-        
-        for (string i = 0; i < 3; i++){
-            result += 'Hello World!;';
-        }
-        
-
+        for (Integer i = 0; i < 3; i++) {
+            result += 'Hello World!';
+            }
+            System.debug(result);
+    
         return result; // Replace null with the variable you used to store the result
     }
 
@@ -214,17 +214,24 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static String repeatString(String inputString, Integer repeatCount) {
         // Initialize the result String
-
+        String result = '';
         // Use a for loop to append the inputString to the result string repeatCount times
-        /*
-        for () {
-
+         //for () { 
+        Integer repeatCount = 3;
+        String inputString = 'Hello World!';
+            for (Integer i = 0; i < repeatCount; i++) {
+                result += inputString;
+                if (i < repeatCount - 1) {
+                    result += '; ';
+                }
+            }
+        System.debug(result);           
             // If it is not the last iteration, add a semicolon to separate the strings
         }
         */
 
         // Return the final result string
-        return null; // Replace null with the variable you used to store the result
+        return result; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -236,9 +243,6 @@ public with sharing class FlowControlLoopsCollections {
     public static List<Integer> createAndPopulateList() {
         // Create a new list of integers
         List<integer> newIntList = new List<integer>();
-
-        list
-
         // Add the integers 1, 2, and 3 to the list
         newIntList.add(1);
         newIntList.add(2);
@@ -347,7 +351,15 @@ public with sharing class FlowControlLoopsCollections {
 
         // Loop through the list of words
             // If the current word is the word to find, exit the loop
-
+            List<String> findWordInList = new List <String> {'Hello', 'World','Goodbye'};
+                for (String word : findWordInList) {
+                    if(word == 'World') {
+                        break;
+                        }
+                           //System.debug(word);
+                           //System.debug(findWordInList.size());
+                         // System.debug(findWordInList.get(word));
+            } 
         return null; // Replace null with the variable you used to store the result
     }
 
@@ -397,7 +409,7 @@ public with sharing class FlowControlLoopsCollections {
         // add Pears => 20
         // add Grapes => 25
 
-        return Fruits; // Replace null with the variable you used to store the result
+        return fruitsByQuantity; // Replace null with the variable you used to store the result
     }
 
     /**
