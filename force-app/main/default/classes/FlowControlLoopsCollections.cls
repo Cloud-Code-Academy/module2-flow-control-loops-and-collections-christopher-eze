@@ -356,12 +356,11 @@ public with sharing class FlowControlLoopsCollections {
                     if(word == 'World') {
                         break;
                         }
-                           //System.debug(word);
-                           //System.debug(findWordInList.size());
-                         // System.debug(findWordInList.get(word));
-            } 
-        return null; // Replace null with the variable you used to store the result
-    }
+                        //System.debug(word);
+                        //System.debug(findWordInList.size());
+                    } 
+             //return null; // Replace null with the variable you used to store the result
+            }
 
     /**
      * Question 17
